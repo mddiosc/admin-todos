@@ -13,11 +13,10 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
 model Todo {
-  id        String   @id @default(uuid())
+  id          String   @id @default(uuid())
   description String
-  completed Boolean @default(false)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  completed   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 }
